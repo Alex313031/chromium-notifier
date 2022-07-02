@@ -4,9 +4,9 @@
   "manifest_version": 3,
   "name": "Chromium Update Notifications",
   "short_name": "Chromium Notifications",
-  "version": "1.9.0",
-  "version_name": "1.9.0",
-  "minimum_chrome_version": "45",
+  "version": "1.9.1",
+  "version_name": "1.9.1",
+  "minimum_chrome_version": "88",
   "background": {
 	"type": "module",
     "service_worker": "js/background.js"
