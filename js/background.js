@@ -129,7 +129,7 @@ chrome.storage.onChanged.addListener(async () => {
 
   const { uaFullVersion } = await getUserAgentData()
 
-  chrome.browserAction.setBadgeText({
+  chrome.action.setBadgeText({
     text:
       (current && uaFullVersion !== current.version) || extensionsNew
         ? 'New'
@@ -138,8 +138,8 @@ chrome.storage.onChanged.addListener(async () => {
 
   if (error) {
     console.error(error)
-    chrome.browserAction.setBadgeBackgroundColor({ color: [180, 0, 20, 255] })
-    chrome.browserAction.setBadgeText({ text: 'Error!' })
+    chrome.action.setBadgeBackgroundColor({ color: [180, 0, 20, 255] })
+    chrome.action.setBadgeText({ text: 'Error!' })
   }
 })
 
