@@ -210,15 +210,15 @@ const Header = ({ version }) => html`
   <div>
     <div>
       <p style="color: #202124; margin: 0">
-        <strong>Chromium Update Notifications </strong>
+        <strong><a href="https://www.chromium.org/" target="_blank">Chromium</a> Update Notifications </strong>
         <code>${version && `v${version}`}</code>
       </p>
       <span>based on </span>
       <a href="https://chromium.woolyss.com/" target="_blank">Woolyss</a>
     </div>
     <div class="header-cell">
-      <a href="https://github.com/kkkrist/chromium-notifier" target="_blank">
-        <img src="../img/github.svg" style="height: 1rem; width: auto;" />
+      <a href="https://github.com/Alex313031/chromium-notifier" target="_blank">
+        <img src="../imgs/github.svg" style="height: 1.1rem; width: auto;" />
       </a>
     </div>
   </div>
