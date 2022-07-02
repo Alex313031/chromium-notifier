@@ -5,8 +5,8 @@ const addIfNew = (arr = [], item) =>
 
 export const clearError = () =>
   new Promise(resolve =>
-    chrome.browserAction.setBadgeText({ text: '' }, () =>
-      chrome.browserAction.setBadgeBackgroundColor(
+    chrome.action.setBadgeText({ text: '' }, () =>
+      chrome.action.setBadgeBackgroundColor(
         { color: [0, 150, 180, 255] },
         () => chrome.storage.local.set({ error: null }, () => resolve())
       )
@@ -54,7 +54,7 @@ const fetchExtensionsInfo = async (extensions, prodversion) => {
   const { useProxy } = await getConfig()
   const self = await getSelf()
 
-  if (useProxy || useProxy === undefined) {
+  if (useProxy || useProxy === false) {
     const res = await fetch(
       `https://chrome-extension-service-kkkrist.vercel.app/api?pluginVersion=${self &&
         self.version}`,
